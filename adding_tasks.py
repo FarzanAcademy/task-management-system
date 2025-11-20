@@ -15,7 +15,7 @@ conn.execute(query)
 conn.commit()
 
 query = "INSERT INTO my_task (title, description, due_date, is_completed) VALUES (?, ?, ?, ?)"
-conn.execute(query, ("exercise", "football", "2025-11-23 20:00:00", 1))
+conn.execute(query, ("exercise", "f", "2025-11-23 20:00:00", 1))
 conn.commit()
 
 query = "SELECT * FROM my_task"
