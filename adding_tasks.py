@@ -14,6 +14,7 @@ query = """
 conn.execute(query)
 conn.commit()
 query = "INSERT INTO my_task (title, description, due_date, is_completed) VALUES (?, ?, ?, ?)"
+
 conn.execute(query, ("exercise", "football", "Play video games" "2025-11-13 16:00:00", 1))
 conn.commit()
 
