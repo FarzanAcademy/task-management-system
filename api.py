@@ -1,0 +1,12 @@
+import requests
+
+response = requests.get(url="https://cataas.com/cat?json=true")
+
+if response.status_code == 200:
+   print(f"link is valid: {response.status_code}")
+   data = response.json()
+   print(data)
+elif str(response.status_code).startswith("4"):
+   print("your link is invalid")
+elif str(response.status_code).startswith("5"):
+   print("website is invalid")
